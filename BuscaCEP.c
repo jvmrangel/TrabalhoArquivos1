@@ -56,6 +56,7 @@ int main(int argc, char**argv)
 			fclose(f);
 			return 0;
 		}
+
 		if (strncmp(argv[1], e.cep, 8) < 0)
 				ultimo = meio - 1;
 		else
@@ -63,48 +64,7 @@ int main(int argc, char**argv)
 	}
 
 	fprintf(stderr, "CEP nao foi encontrado");
+
 	return 1;
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  /*  while (primeiro <= ultimo)
-    {
-        c++;
-        i++;
-        meio = (primeiro+ultimo)/2;
-        fseek(f, meio * sizeof(Endereco), SEEK_SET);	
-        
-    }
-
-
-//	qt = fread(&e,sizeof(Endereco),1,f);
-
-
-	/*while(qt > 0)
-	{
-		c++;
-    //	if(argv[1] == e.cep)
-		if(strncmp(argv[1],e.cep,8)==0)
-		{
-			printf("%.72s\n%.72s\n%.72s\n%.72s\n%.2s\n%.8s\n",e.logradouro,e.bairro,e.cidade,e.uf,e.sigla,e.cep);
-			break;
-		}
-		qt = fread(&e,sizeof(Endereco),1,f);		
-	}
-    */
-
-
-
